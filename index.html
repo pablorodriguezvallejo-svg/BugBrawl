@@ -1,335 +1,436 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bug Brawl — El juego de cartas de bichos</title>
-    <meta name="description" content="Bug Brawl: un juego de cartas casual de bichos que pelean. Descubre un mundo natural lleno de color y diversión.">
+    <meta
+      name="description"
+      content="Bug Brawl: un juego de cartas casual de bichos que pelean. Descubre un mundo natural lleno de color y diversión."
+    />
 
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-
-    <!-- Hojas flotantes -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
     <div id="floating-leaves" aria-hidden="true"></div>
 
-    <!-- ===================== NAVBAR ===================== -->
     <nav id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="logo-link">
-                <img src="imagenes/logos_etc/Logo horizontal.png" class="logo-img" alt="Logo Bug Brawl">
-            </a>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">Qué es</a>
-                <a href="#characters" class="nav-link">Bichos</a>
-                <a href="#draw" class="nav-link">Roba carta</a>
-                <a href="galeria.html" class="nav-link">Galería</a>
-                <a href="#cta" class="nav-link">Únete</a>
-            </div>
-            <a href="#cta" class="btn-primary nav-cta">¡Quiero jugar!</a>
-            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
-                <i data-lucide="menu" class="icon"></i>
-            </button>
+      <div class="nav-container">
+        <a href="#hero" class="logo-link">
+          <img
+            src="imagenes/logos_etc/Logo horizontal.png"
+            class="logo-img"
+            alt="Logo Bug Brawl"
+          />
+        </a>
+        <div class="nav-links">
+          <a href="#about" class="nav-link">Qué es</a>
+          <a href="#characters" class="nav-link">Bichos</a>
+          <a href="#draw" class="nav-link">Roba carta</a>
+          <a href="galeria.html" class="nav-link">Galería</a>
+          <a href="#cta" class="nav-link">Únete</a>
         </div>
+        <a href="#cta" class="btn-primary nav-cta">¡Quiero jugar!</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+          <i data-lucide="menu" class="icon"></i>
+        </button>
+      </div>
     </nav>
 
-    <!-- Menú mobile -->
     <div id="mobile-menu" class="mobile-menu">
-        <button id="menu-close" class="menu-close" aria-label="Cerrar menú">
-            <i data-lucide="x" class="icon-lg"></i>
-        </button>
-        <div class="mobile-menu-links">
-            <a href="#about" class="mobile-link">Qué es</a>
-            <a href="#characters" class="mobile-link">Bichos</a>
-            <a href="#draw" class="mobile-link">Roba carta</a>
-            <a href="galeria.html" class="mobile-link">Galería</a>
-            <a href="#cta" class="mobile-link">Únete</a>
-            <a href="#cta" class="btn-primary mobile-cta">¡Quiero jugar!</a>
-        </div>
+      <button id="menu-close" class="menu-close" aria-label="Cerrar menú">
+        <i data-lucide="x" class="icon-lg"></i>
+      </button>
+      <div class="mobile-menu-links">
+        <a href="#about" class="mobile-link">Qué es</a>
+        <a href="#characters" class="mobile-link">Bichos</a>
+        <a href="#draw" class="mobile-link">Roba carta</a>
+        <a href="galeria.html" class="mobile-link">Galería</a>
+        <a href="#cta" class="mobile-link">Únete</a>
+        <a href="#cta" class="btn-primary mobile-cta">¡Quiero jugar!</a>
+      </div>
     </div>
 
-    <!-- ===================== HERO ===================== -->
     <section id="hero" class="section-hero">
-        <div class="hero-glow hero-glow-moss"></div>
-        <div class="hero-glow hero-glow-gold"></div>
-        <div class="container">
-            <div class="hero-grid">
-                <div class="animate-on-scroll">
-                    <span class="badge hero-badge">Juego de cartas casual</span>
-                    <h1 class="hero-title mb-2">
-                        <span class="hero-title-bug">BUG</span>
-                    </h1>
-                    <h1 class="hero-title mb-8">
-                        <span class="hero-title-brawl">BRAWL</span>
-                    </h1>
-                    <p class="hero-text">
-                        Un juego de cartas donde los bichos del bosque se enfrentan en peleas épicas. Casual, colorista y hecho para disfrutar bajo la sombra de un árbol.
-                    </p>
-                    <div class="btn-group">
-                        <a href="#cta" class="btn-primary">
-                            <span>Descubre más</span>
-                            <i data-lucide="arrow-right" class="icon"></i>
-                        </a>
-                        <a href="#draw" class="btn-secondary">
-                            <i data-lucide="layers" class="icon"></i>
-                            <span>Roba una carta</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image-col animate-on-scroll delay-200">
-                    <div class="hero-image-wrapper">
-                        <div class="gallery-item">
-                            <img src="imagenes/logos_etc/logo.png" alt="Hormiga Bug Brawl">
-                        </div>
-                        <div class="hero-frame">
-                            <svg class="frame-svg top-left" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 30 Q8 20 16 16 Q24 12 30 2"/></svg>
-                            <svg class="frame-svg bottom-right" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2 Q12 8 20 16 Q24 24 30 30"/></svg>
-                        </div>
-                    </div>
-                </div>
+      <div class="hero-glow hero-glow-moss"></div>
+      <div class="hero-glow hero-glow-gold"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="animate-on-scroll">
+            <span class="badge hero-badge">Juego de cartas casual</span>
+            <h1 class="hero-title mb-2">
+              <span class="hero-title-bug">BUG</span>
+            </h1>
+            <h1 class="hero-title mb-8">
+              <span class="hero-title-brawl">BRAWL</span>
+            </h1>
+            <p class="hero-text">
+              Un juego de cartas donde los bichos del bosque se enfrentan en
+              peleas épicas. Casual, colorista y hecho para disfrutar bajo la
+              sombra de un árbol.
+            </p>
+            <div class="btn-group">
+              <a href="#cta" class="btn-primary">
+                <span>Descubre más</span>
+                <i data-lucide="arrow-right" class="icon"></i>
+              </a>
+              <a href="#draw" class="btn-secondary">
+                <i data-lucide="layers" class="icon"></i>
+                <span>Roba una carta</span>
+              </a>
             </div>
+          </div>
+          <div class="hero-image-col animate-on-scroll delay-200">
+            <div class="hero-image-wrapper">
+              <div class="gallery-item">
+                <img
+                  src="imagenes/logos_etc/logo.png"
+                  alt="Hormiga Bug Brawl"
+                />
+              </div>
+              <div class="hero-frame">
+                <svg
+                  class="frame-svg top-left"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M2 30 Q8 20 16 16 Q24 12 30 2" />
+                </svg>
+                <svg
+                  class="frame-svg bottom-right"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M2 2 Q12 8 20 16 Q24 24 30 30" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="scroll-indicator">
-            <span class="scroll-text">Scroll</span>
-            <i data-lucide="chevron-down" class="icon scroll-icon"></i>
-        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span class="scroll-text">Scroll</span>
+        <i data-lucide="chevron-down" class="icon scroll-icon"></i>
+      </div>
     </section>
 
-    <!-- Separador -->
     <div class="leaf-divider" aria-hidden="true">
-        <svg viewBox="0 0 200 20" class="leaf-svg moss-leaf" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 10 Q25 2 50 10 Q75 18 100 10 Q125 2 150 10 Q175 18 200 10"/></svg>
+      <svg
+        viewBox="0 0 200 20"
+        class="leaf-svg moss-leaf"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1"
+      >
+        <path
+          d="M0 10 Q25 2 50 10 Q75 18 100 10 Q125 2 150 10 Q175 18 200 10"
+        />
+      </svg>
     </div>
 
-    <!-- ===================== ABOUT ===================== -->
     <section id="about" class="section">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="badge">Sobre el juego</span>
-                <h2 class="section-title">
-                    ¿Qué es <span class="text-gold">Bug Brawl</span>?
-                </h2>
-                <div class="section-divider section-divider-center"></div>
-                <p class="section-subtitle">
-                    Bug Brawl es un juego de cartas casual pensado para que cualquiera pueda jugar sin complicaciones. Lo realmente especial está en cada ilustración: cada bicho tiene personalidad, color y alma.
-                </p>
-            </div>
-            <div class="grid-3">
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon bg-red-light text-red-warm">
-                        <i data-lucide="gamepad-2" class="icon"></i>
-                    </div>
-                    <h3 class="feature-title">Casual</h3>
-                    <p class="feature-text">Reglas sencillas, partidas rápidas. No necesitas ser un experto en juegos de cartas para disfrutar.</p>
-                </div>
-                <div class="feature-card animate-on-scroll delay-100">
-                    <div class="feature-icon bg-gold-light text-gold">
-                        <i data-lucide="palette" class="icon"></i>
-                    </div>
-                    <h3 class="feature-title">Artístico</h3>
-                    <p class="feature-text">Cada carta es una ilustración diseñada con mimo. El arte es el verdadero protagonista del juego.</p>
-                </div>
-                <div class="feature-card animate-on-scroll delay-200">
-                    <div class="feature-icon bg-moss-light text-moss-light-icon">
-                        <i data-lucide="users" class="icon"></i>
-                    </div>
-                    <h3 class="feature-title">Para todos</h3>
-                    <p class="feature-text">Diseñado para que muchos podamos jugar, sin importar la edad o la experiencia previa.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="badge">Sobre el juego</span>
+          <h2 class="section-title">
+            ¿Qué es <span class="text-gold">Bug Brawl</span>?
+          </h2>
+          <div class="section-divider section-divider-center"></div>
+          <p class="section-subtitle">
+            Bug Brawl es un juego de cartas casual pensado para que cualquiera
+            pueda jugar sin complicaciones. Lo realmente especial está en cada
+            ilustración: cada bicho tiene personalidad, color y alma.
+          </p>
         </div>
+        <div class="grid-3">
+          <div class="feature-card animate-on-scroll">
+            <div class="feature-icon bg-red-light text-red-warm">
+              <i data-lucide="gamepad-2" class="icon"></i>
+            </div>
+            <h3 class="feature-title">Casual</h3>
+            <p class="feature-text">
+              Reglas sencillas, partidas rápidas. No necesitas ser un experto en
+              juegos de cartas para disfrutar.
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-100">
+            <div class="feature-icon bg-gold-light text-gold">
+              <i data-lucide="palette" class="icon"></i>
+            </div>
+            <h3 class="feature-title">Artístico</h3>
+            <p class="feature-text">
+              Cada carta es una ilustración diseñada con mimo. El arte es el
+              verdadero protagonista del juego.
+            </p>
+          </div>
+          <div class="feature-card animate-on-scroll delay-200">
+            <div class="feature-icon bg-moss-light text-moss-light-icon">
+              <i data-lucide="users" class="icon"></i>
+            </div>
+            <h3 class="feature-title">Para todos</h3>
+            <p class="feature-text">
+              Diseñado para que muchos podamos jugar, sin importar la edad o la
+              experiencia previa.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ===================== CHARACTERS ===================== -->
     <section id="characters" class="section">
-        <div class="section-bg-moss"></div>
-        <div class="container relative-z-10">
-            <div class="section-header animate-on-scroll">
-                <span class="badge">Personajes</span>
-                <h2 class="section-title">
-                    Algunos de los <span class="text-red-warm">Bichos</span>
-                </h2>
-                <div class="section-divider section-divider-center"></div>
-            </div>
-            <div class="grid-3">
-                <!-- El Picotazo -->
-                <div class="character-card animate-on-scroll">
-                    <div class="gallery-item">
-                        <img src="imagenes/artes/arte1.png" alt="El Picotazo">
-                    </div>
-                    <div class="character-card-info">
-                        <h3 class="character-name">El Picotazo</h3>
-                        <p class="character-desc">El héroe rojo más veloz del bosque.</p>
-                    </div>
-                </div>
-                <!-- Sombra Alada -->
-                <div class="character-card animate-on-scroll">
-                    <div class="gallery-item">
-                        <img src="imagenes/artes/arte2.png" alt="Sombra Alada">
-                    </div>
-                    <div class="character-card-info">
-                        <h3 class="character-name">Sombra alada</h3>
-                        <p class="character-desc">La luchadora silenciosa.</p>
-                    </div>
-                </div>
-                <!-- Kabutomaru -->
-                <div class="character-card animate-on-scroll delay-200">
-                    <div class="gallery-item">
-                        <img src="imagenes/artes/arte3.png" alt="Kabutomaru">
-                    </div>
-                    <div class="character-card-info">
-                        <h3 class="character-name">Kabutomaru</h3>
-                        <p class="character-desc">El honor resistente.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="section-bg-moss"></div>
+      <div class="container relative-z-10">
+        <div class="section-header animate-on-scroll">
+          <span class="badge">Personajes</span>
+          <h2 class="section-title">
+            Algunos de los <span class="text-red-warm">Bichos</span>
+          </h2>
+          <div class="section-divider section-divider-center"></div>
         </div>
+        <div class="grid-3">
+          <div class="character-card animate-on-scroll">
+            <div class="gallery-item">
+              <img src="imagenes/artes/arte1.png" alt="El Picotazo" />
+            </div>
+            <div class="character-card-info">
+              <h3 class="character-name">El Picotazo</h3>
+              <p class="character-desc">El héroe rojo más veloz del bosque.</p>
+            </div>
+          </div>
+          <div class="character-card animate-on-scroll">
+            <div class="gallery-item">
+              <img src="imagenes/artes/arte2.png" alt="Sombra Alada" />
+            </div>
+            <div class="character-card-info">
+              <h3 class="character-name">Sombra alada</h3>
+              <p class="character-desc">La luchadora silenciosa.</p>
+            </div>
+          </div>
+          <div class="character-card animate-on-scroll delay-200">
+            <div class="gallery-item">
+              <img src="imagenes/artes/arte3.png" alt="Kabutomaru" />
+            </div>
+            <div class="character-card-info">
+              <h3 class="character-name">Kabutomaru</h3>
+              <p class="character-desc">El honor resistente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Separador -->
     <div class="leaf-divider" aria-hidden="true">
-        <svg viewBox="0 0 200 20" class="leaf-svg gold-leaf" fill="none" stroke="currentColor" stroke-width="1"><path d="M0 10 Q25 18 50 10 Q75 2 100 10 Q125 18 150 10 Q175 2 200 10"/></svg>
+      <svg
+        viewBox="0 0 200 20"
+        class="leaf-svg gold-leaf"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1"
+      >
+        <path
+          d="M0 10 Q25 18 50 10 Q75 2 100 10 Q125 18 150 10 Q175 2 200 10"
+        />
+      </svg>
     </div>
 
-    <!-- ===================== ROBA CARTA ===================== -->
     <section id="draw" class="section">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="badge">Interactivo</span>
-                <h2 class="section-title">
-                    ¡Roba tu <span class="text-gold">carta</span>!
-                </h2>
-                <div class="section-divider section-divider-center"></div>
-                <p class="section-subtitle">
-                    Haz clic y descubre qué bicho te toca en combate. La suerte del bosque decide.
-                </p>
-            </div>
-            <div class="draw-card-container animate-on-scroll">
-                <!-- Carta -->
-                <div id="draw-card" class="draw-card" onclick="flipCard()">
-                    <div class="draw-card-inner">
-                        <!-- Dorso -->
-                        <div class="draw-card-front">
-                            <div class="draw-card-back-design">
-                                 <img id="draw-image" src="imagenes/cartas/reverso.png" alt="Carta robada" class="draw-card-image">
-                            </div>
-                        </div>
-                        <!-- Frente: Imagen real -->
-                        <div class="draw-card-back">
-                            <img id="draw-image" src="imagenes/hormiga_no_bg.png" alt="Carta robada" class="draw-card-image">
-                        </div>
-                    </div>
-                </div>
-                <!-- Botón -->
-                <button id="draw-btn" onclick="flipCard()" class="btn-primary draw-btn">
-                    <i data-lucide="sparkles" class="icon"></i>
-                    <span>¡Roba una carta!</span>
-                </button>
-                <p id="draw-hint" class="draw-hint">
-                    También puedes hacer clic en la carta
-                </p>
-            </div>
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="badge">Interactivo</span>
+          <h2 class="section-title">
+            ¡Roba tu <span class="text-gold">carta</span>!
+          </h2>
+          <div class="section-divider section-divider-center"></div>
+          <p class="section-subtitle">
+            Haz clic y descubre qué bicho te toca en combate. La suerte del
+            bosque decide.
+          </p>
         </div>
+        <div class="draw-card-container animate-on-scroll">
+          <div id="draw-card" class="draw-card" onclick="flipCard()">
+            <div class="draw-card-inner">
+              <div class="draw-card-front">
+                <div class="draw-card-back-design">
+                  <img
+                    id="draw-image"
+                    src="imagenes/cartas/reverso.png"
+                    alt="Carta robada"
+                    class="draw-card-image"
+                  />
+                </div>
+              </div>
+              <div class="draw-card-back">
+                <img
+                  id="draw-image"
+                  src="imagenes/hormiga_no_bg.png"
+                  alt="Carta robada"
+                  class="draw-card-image"
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            id="draw-btn"
+            onclick="flipCard()"
+            class="btn-primary draw-btn"
+          >
+            <i data-lucide="sparkles" class="icon"></i>
+            <span>¡Roba una carta!</span>
+          </button>
+          <p id="draw-hint" class="draw-hint">
+            También puedes hacer clic en la carta
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- ===================== STATS ===================== -->
     <section class="section">
-        <div class="section-bg-wood"></div>
-        <div class="container relative-z-10">
-            <div class="stats-grid">
-                <div class="animate-on-scroll">
-                    <span class="stat-number text-gold" data-target="50">0</span>
-                    <span class="stat-plus text-gold">+</span>
-                    <p class="stat-label">Cartas únicas</p>
-                </div>
-                <div class="animate-on-scroll delay-100">
-                    <span class="stat-number text-red-warm" data-target="15">0</span>
-                    <span class="stat-plus text-red-warm">+</span>
-                    <p class="stat-label">Bichos distintos</p>
-                </div>
-                <div class="animate-on-scroll delay-200">
-                    <span class="stat-number text-moss-light" data-target="3">0</span>
-                    <p class="stat-label">Minutos por partida</p>
-                </div>
-                <div class="animate-on-scroll delay-300">
-                    <span class="stat-infinity">∞</span>
-                    <p class="stat-label">Partidas épicas</p>
-                </div>
-            </div>
+      <div class="section-bg-wood"></div>
+      <div class="container relative-z-10">
+        <div class="stats-grid">
+          <div class="animate-on-scroll">
+            <span class="stat-number text-gold" data-target="50">0</span>
+            <span class="stat-plus text-gold">+</span>
+            <p class="stat-label">Cartas únicas</p>
+          </div>
+          <div class="animate-on-scroll delay-100">
+            <span class="stat-number text-red-warm" data-target="15">0</span>
+            <span class="stat-plus text-red-warm">+</span>
+            <p class="stat-label">Bichos distintos</p>
+          </div>
+          <div class="animate-on-scroll delay-200">
+            <span class="stat-number text-moss-light" data-target="3">0</span>
+            <p class="stat-label">Minutos por partida</p>
+          </div>
+          <div class="animate-on-scroll delay-300">
+            <span class="stat-infinity">∞</span>
+            <p class="stat-label">Partidas épicas</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- ===================== CTA ===================== -->
     <section id="cta" class="section">
-        <div class="cta-glow"></div>
-        <div class="cta-content animate-on-scroll">
-            <span class="badge">Próximamente</span>
-            <h2 class="section-title">
-                ¿Listo para la <span class="text-red-warm">pelea</span>?
-            </h2>
-            <div class="section-divider section-divider-center"></div>
-            <p class="cta-text">
-                Bug Brawl está en desarrollo. Déjanos tu email y sé el primero en saber cuándo estará disponible.
-            </p>
-            <form id="email-form" class="email-form" onsubmit="handleEmailSubmit(event)">
-                <input type="email" placeholder="tu@email.com" required class="email-input">
-                <button type="submit" class="btn-primary email-btn">
-                    <i data-lucide="bell" class="icon"></i>
-                    <span>Avísame</span>
-                </button>
-            </form>
-            <p id="email-success" class="email-success">
-                ¡Perfecto! Te avisaremos cuando salga 🌿
-            </p>
-        </div>
+      <div class="cta-glow"></div>
+      <div class="cta-content animate-on-scroll">
+        <span class="badge">Próximamente</span>
+        <h2 class="section-title">
+          ¿Listo para la <span class="text-red-warm">pelea</span>?
+        </h2>
+        <div class="section-divider section-divider-center"></div>
+        <p class="cta-text">
+          Bug Brawl está en desarrollo. Déjanos tu email y sé el primero en
+          saber cuándo estará disponible.
+        </p>
+        <form
+          id="email-form"
+          class="email-form"
+          onsubmit="handleEmailSubmit(event)"
+        >
+          <input
+            type="email"
+            placeholder="tu@email.com"
+            required
+            class="email-input"
+          />
+          <button type="submit" class="btn-primary email-btn">
+            <i data-lucide="bell" class="icon"></i>
+            <span>Avísame</span>
+          </button>
+        </form>
+        <p id="email-success" class="email-success">
+          ¡Perfecto! Te avisaremos cuando salga 🌿
+        </p>
+      </div>
     </section>
 
-    <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col-2">
-                    <div class="logo-footer">
-                        <img src="imagenes/logo2.png" class="logo-img" alt="Logo Bug Brawl">
-                        <span class="footer-logo-text">Bug Brawl</span>
-                    </div>
-                    <p class="footer-desc">
-                        Un juego de cartas casual de bichos que pelean. Hecho con arte, color y mucha diversión. Proyecto de TFG.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="footer-title">Navegación</h4>
-                    <ul class="footer-list">
-                        <li><a href="#about" class="footer-link">Qué es</a></li>
-                        <li><a href="#characters" class="footer-link">Bichos</a></li>
-                        <li><a href="#draw" class="footer-link">Roba carta</a></li>
-                        <li><a href="galeria.html" class="footer-link">Galería</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer-title">Sígueme</h4>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Twitter/X">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Behance">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11c1.93 0 3.5-1.57 3.5-3.5S9.43 4 7.5 4H2v14h5.5c2.21 0 4-1.79 4-4s-1.79-4-4-4zm0-5c.83 0 1.5.67 1.5 1.5S8.33 9 7.5 9H4V6h3.5zm0 10H4v-4h3.5c1.1 0 2 .9 2 2s-.9 2-2 2zM22 8.5h-7V7h7v1.5zM19 12c0 2.21-1.79 4-4 4h-2v-8h2c2.21 0 4 1.79 4 4zm-2 0c0-1.1-.9-2-2-2h-.5v4h.5c1.1 0 2-.9 2-2z"/></svg>
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col-2">
+            <div class="logo-footer">
+              <img
+                src="imagenes/logo2.png"
+                class="logo-img"
+                alt="Logo Bug Brawl"
+              />
+              <span class="footer-logo-text">Bug Brawl</span>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2025 Bug Brawl — Proyecto TFG. Todos los derechos reservados.</p>
+            <p class="footer-desc">
+              Un juego de cartas casual de bichos que pelean. Hecho con arte,
+              color y mucha diversión. Proyecto de TFG.
+            </p>
+          </div>
+          <div>
+            <h4 class="footer-title">Navegación</h4>
+            <ul class="footer-list">
+              <li><a href="#about" class="footer-link">Qué es</a></li>
+              <li><a href="#characters" class="footer-link">Bichos</a></li>
+              <li><a href="#draw" class="footer-link">Roba carta</a></li>
+              <li><a href="galeria.html" class="footer-link">Galería</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Sígueme</h4>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter/X">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Behance">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M7.5 11c1.93 0 3.5-1.57 3.5-3.5S9.43 4 7.5 4H2v14h5.5c2.21 0 4-1.79 4-4s-1.79-4-4-4zm0-5c.83 0 1.5.67 1.5 1.5S8.33 9 7.5 9H4V6h3.5zm0 10H4v-4h3.5c1.1 0 2 .9 2 2s-.9 2-2 2zM22 8.5h-7V7h7v1.5zM19 12c0 2.21-1.79 4-4 4h-2v-8h2c2.21 0 4 1.79 4 4zm-2 0c0-1.1-.9-2-2-2h-.5v4h.5c1.1 0 2-.9 2-2z"
+                  />
+                </svg>
+              </a>
             </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2025 Bug Brawl — Proyecto TFG. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
