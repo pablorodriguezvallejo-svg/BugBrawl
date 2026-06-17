@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Brawl — Galería</title>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <!-- Hojas flotantes -->
+    <div id="floating-leaves" aria-hidden="true"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav id="navbar" class="scrolled">
+        <div class="nav-container">
+            <a href="index.html#hero" class="logo-link">
+                <img src="imagenes/logo2.png" class="logo-img" alt="Logo Bug Brawl">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link">Qué es</a>
+                <a href="index.html#characters" class="nav-link">Bichos</a>
+                <a href="index.html#draw" class="nav-link">Roba carta</a>
+                <a href="galeria.html" class="nav-link active">Galería</a>
+                <a href="index.html#cta" class="nav-link">Únete</a>
+            </div>
+            <a href="index.html#cta" class="btn-primary nav-cta">¡Quiero jugar!</a>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
+                <i data-lucide="menu" class="icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menú mobile -->
+    <div id="mobile-menu" class="mobile-menu">
+        <button id="menu-close" class="menu-close" aria-label="Cerrar menú">
+            <i data-lucide="x" class="icon-lg"></i>
+        </button>
+        <div class="mobile-menu-links">
+            <a href="index.html#about" class="mobile-link">Qué es</a>
+            <a href="index.html#characters" class="mobile-link">Bichos</a>
+            <a href="index.html#draw" class="mobile-link">Roba carta</a>
+            <a href="galeria.html" class="mobile-link">Galería</a>
+            <a href="index.html#cta" class="mobile-link">Únete</a>
+            <a href="index.html#cta" class="btn-primary mobile-cta">¡Quiero jugar!</a>
+        </div>
+    </div>
+
+    <!-- ===================== GALERÍA ===================== -->
+    <section id="gallery" class="section pt-32">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="badge">Galería</span>
+                <h2 class="section-title">
+                    El <span class="text-gold">Arte</span> lo es todo
+                </h2>
+                <div class="section-divider section-divider-center"></div>
+                <p class="section-subtitle">
+                    Cada ilustración está creada con mimo para transmitir la personalidad de cada bicho.
+                </p>
+            </div>
+            <div class="gallery-grid animate-on-scroll">
+                <div class="gallery-item">
+                    <img src="imagenes/arte_hormiga.png" alt="Hormiga Bug Brawl">
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/arte_mariposa.png" alt="Mariposa Bug Brawl">
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/arte_escarabajo.png" alt="Escarabajo Bug Brawl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col-2">
+                    <div class="logo-footer">
+                        <img src="imagenes/logo2.png" class="logo-img" alt="Logo Bug Brawl">
+                        <span class="footer-logo-text">Bug Brawl</span>
+                    </div>
+                    <p class="footer-desc">
+                        Un juego de cartas casual de bichos que pelean. Hecho con arte, color y mucha diversión. Proyecto de TFG.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navegación</h4>
+                    <ul class="footer-list">
+                        <li><a href="index.html#about" class="footer-link">Qué es</a></li>
+                        <li><a href="index.html#characters" class="footer-link">Bichos</a></li>
+                        <li><a href="index.html#draw" class="footer-link">Roba carta</a></li>
+                        <li><a href="galeria.html" class="footer-link">Galería</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Sígueme</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter/X">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Behance">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11c1.93 0 3.5-1.57 3.5-3.5S9.43 4 7.5 4H2v14h5.5c2.21 0 4-1.79 4-4s-1.79-4-4-4zm0-5c.83 0 1.5.67 1.5 1.5S8.33 9 7.5 9H4V6h3.5zm0 10H4v-4h3.5c1.1 0 2 .9 2 2s-.9 2-2 2zM22 8.5h-7V7h7v1.5zM19 12c0 2.21-1.79 4-4 4h-2v-8h2c2.21 0 4 1.79 4 4zm-2 0c0-1.1-.9-2-2-2h-.5v4h.5c1.1 0 2-.9 2-2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Bug Brawl — Proyecto TFG. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
