@@ -12,6 +12,11 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="imagenes/logos_etc/IMG_0179 - copia.png"
+    />
   </head>
   <body>
     <div id="floating-leaves" aria-hidden="true"></div>
@@ -139,7 +144,7 @@
         <div class="section-header animate-on-scroll">
           <span class="badge">Sobre el juego</span>
           <h2 class="section-title">
-            ¿Qué es <span class="text-gold">Bug Brawl</span>?
+            Conoce <span class="text-gold">Bug Brawl</span>
           </h2>
           <div class="section-divider section-divider-center"></div>
           <p class="section-subtitle">
@@ -258,17 +263,17 @@
               <div class="draw-card-front">
                 <div class="draw-card-back-design">
                   <img
-                    id="draw-image"
+                    id="draw-back-image"
                     src="imagenes/cartas/reverso.png"
-                    alt="Carta robada"
+                    alt="Reverso de carta"
                     class="draw-card-image"
                   />
                 </div>
               </div>
               <div class="draw-card-back">
                 <img
-                  id="draw-image"
-                  src="imagenes/hormiga_no_bg.png"
+                  id="draw-front-image"
+                  src="imagenes/cartas/reverso.png"
                   alt="Carta robada"
                   class="draw-card-image"
                 />
@@ -296,21 +301,58 @@
         <div class="stats-grid">
           <div class="animate-on-scroll">
             <span class="stat-number text-gold" data-target="50">0</span>
-            <span class="stat-plus text-gold">+</span>
             <p class="stat-label">Cartas únicas</p>
           </div>
           <div class="animate-on-scroll delay-100">
             <span class="stat-number text-red-warm" data-target="15">0</span>
-            <span class="stat-plus text-red-warm">+</span>
             <p class="stat-label">Bichos distintos</p>
           </div>
           <div class="animate-on-scroll delay-200">
-            <span class="stat-number text-moss-light" data-target="3">0</span>
-            <p class="stat-label">Minutos por partida</p>
+            <span class="stat-number text-moss-light" data-target="20">0</span>
+            <p class="stat-label">≈ Minutos por partida</p>
           </div>
           <div class="animate-on-scroll delay-300">
             <span class="stat-infinity">∞</span>
             <p class="stat-label">Partidas épicas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-cta">
+      <div class="container">
+        <div class="gallery-cta-content">
+          <div class="gallery-cta-text">
+            <span class="badge">Galería</span>
+
+            <h2 class="gallery-cta-title">
+              El arte detrás de cada
+              <span>bicho</span>
+            </h2>
+
+            <p class="gallery-cta-description">
+              Descubre todas las ilustraciones creadas para Bug Brawl. Cada
+              carta tiene personalidad propia, colores únicos y mucho mimo
+              detrás.
+            </p>
+
+            <a href="galeria.html" class="btn btn-primary">
+              Ver galería completa
+            </a>
+          </div>
+
+          <div class="gallery-cta-cards">
+            <div class="gallery-cta-card">
+              <img src="imagenes/artes/arte3.png" alt="" />
+            </div>
+
+            <div class="gallery-cta-card">
+              <img src="imagenes/artes/arte7.png" alt="" />
+            </div>
+
+            <div class="gallery-cta-card">
+              <img src="imagenes/artes/arte12.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -321,7 +363,7 @@
       <div class="cta-content animate-on-scroll">
         <span class="badge">Próximamente</span>
         <h2 class="section-title">
-          ¿Listo para la <span class="text-red-warm">pelea</span>?
+          ¡Preparate para la <span class="text-red-warm">pelea</span>!
         </h2>
         <div class="section-divider section-divider-center"></div>
         <p class="cta-text">
@@ -354,14 +396,6 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col-2">
-            <div class="logo-footer">
-              <img
-                src="imagenes/logo2.png"
-                class="logo-img"
-                alt="Logo Bug Brawl"
-              />
-              <span class="footer-logo-text">Bug Brawl</span>
-            </div>
             <p class="footer-desc">
               Un juego de cartas casual de bichos que pelean. Hecho con arte,
               color y mucha diversión. Proyecto de TFG.
